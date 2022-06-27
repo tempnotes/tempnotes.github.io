@@ -7,30 +7,58 @@
   <body>
     <h1>Temp notes</h1>
     <h6>Note: You can save the notes you want for later use by pressing "CTRL+S"</h6>
+    <h6>Note: Click the "Clear dialog" if you are on mobile and want to put another note it won't clear on mobile and it will clear only if you press enter 
+    <p>Notes you entered:</p>
     <div id="container1">
       <div id="console">
         <p id="console_content">
-
         </p>
       </div>
       <div>
         <input id="commandline" type="text" name="command_line" placeholder="Enter Note">
-        <input id="commandButton" type="button" name="command_button" value="Insert" onclick="showVal();">
+        <button id="myBtn" onclick="add()">Insert Note</button>
+        <button id="button" onclick="clearFields()">Clear Dialog</button>
       </div>
     </div>
 
   </body>
   <script>
-    function showVal() {
+    function add() {
       var tmp = document.getElementById("commandline").value;
       document.getElementById('console_content').innerHTML += (tmp + "<br/>");
+      document.getElementById("commandline").value=""
     }
-</script>
-<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+   
+  </script>
+  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
     new Crate({
         server: '990996784060964884', // support server for tempnotes
         channel: '990996784060964887' // #ask-for-help
     })
+</script>
+<script>
+var input = document.getElementById("commandline");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+</script>
+<script>
+var input = document.getElementById("commandline");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("button").click();
+  }
+});
+</script>
+<script type="text/javascript">
+function clearFields() {
+    document.getElementById("commandline").value=""
+    document.getElementById("textfield2").value=""
+}
 </script>
   <h6>Made by love by Aryan or tempnotes.github.io</h6>
 </html>
