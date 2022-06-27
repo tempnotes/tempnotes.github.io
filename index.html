@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Temp notes made by Aryan!</title>
+  </head>
+  <body>
+    <h1>Temp notes</h1>
+    <h6>Note: You can save the notes you want for later use by pressing "CTRL+S"</h6>
+    <div id="container1">
+      <div id="console">
+        <p id="console_content">
+
+        </p>
+      </div>
+      <div>
+        <input id="commandline" type="text" name="command_line" placeholder="Enter Note">
+        <input id="commandButton" type="button" name="command_button" value="Insert" onclick="showVal();">
+      </div>
+    </div>
+
+  </body>
+  <script>
+    function showVal() {
+      var tmp = document.getElementById("commandline").value;
+      document.getElementById('console_content').innerHTML += (tmp + "<br/>");
+    }
+  </script>
+  <h6>Made by love by Aryan or tempnotes.github.io</h6>
+</html>
