@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<!-- saved from url=(0028)https://tempnotes.github.io/ -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>Temp notes made by Aryan!</title>
-  </head>
+  <style data-emotion=""></style></head>
   <body>
     <h1>Temp notes</h1>
-    <h6>Note: You can save the notes you want for later use by pressing "CTRL+S" and these notes will be deleted and we won't see what you've entered</h6>
-    <h6>Note: Click the "Clear dialog" if you are on mobile and want to put another note it won't clear on mobile and it will clear only if you press enter 
-    <p>Notes you entered:</p>
+    <h6>Note: You can save the notes you want for later use by screenshotting or staying in this page and these notes will be deleted and we won't see what you've entered</h6>
     <div id="container1">
       <div id="console">
         <p id="console_content">
@@ -17,23 +15,22 @@
       <div>
         <input id="commandline" type="text" name="command_line" placeholder="Enter Note">
         <button id="myBtn" onclick="add()">Insert Note</button>
-        <button id="button" onclick="clearFields()">Clear Dialog</button>
+        <button onClick="window.location.reload();">Clear Notes</button>
       </div>
     </div>
 
-  </body>
   <script>
     function add() {
       var tmp = document.getElementById("commandline").value;
       document.getElementById('console_content').innerHTML += (tmp + "<br/>");
       document.getElementById("commandline").value=""
     }
-   
+d
   </script>
-  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+  <script src="./index_files/crate@3" async="" defer="">
     new Crate({
-        server: '990996784060964884', // support server for tempnotes
-        channel: '990996784060964887' // #ask-for-help
+        server: '990996784060964884',
+        channel: '990996784060964887'
     })
 </script>
 <script>
@@ -57,8 +54,7 @@ input.addEventListener("keypress", function(event) {
 <script type="text/javascript">
 function clearFields() {
     document.getElementById("commandline").value=""
-    document.getElementById("textfield2").value=""
 }
 </script>
-  <h6>Made by love by Aryan or tempnotes.github.io</h6>
-</html>
+
+<widgetbot-crate src="https://widgetbot.io" docs="docs.widgetbot.io"><crate><div></div></crate></widgetbot-crate></body></html>
